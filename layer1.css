@@ -1,0 +1,335 @@
+/* إعدادات عامة */
+:root {
+    --primary-color: #1a5f7a;
+    --primary-hover: #144d62;
+    --secondary-color: #57c4e5;
+    --accent-color: #f97068;
+    --text-primary: #2d3436;
+    --text-secondary: #636e72;
+    --background: #f8f9fa;
+    --white: #ffffff;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+    --border-radius: 12px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* الخط الأساسي */
+body {
+    font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--background);
+    direction: rtl;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* الحاوية */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* الهيدر */
+.main-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+    color: var(--white);
+    padding: 2rem 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.logo h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.logo p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* المحتوى الرئيسي */
+.main-content {
+    flex: 1;
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+}
+
+/* عنوان القسم */
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.section-title p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+/* شبكة البطاقات */
+.property-type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* بطاقة نوع العقار */
+.property-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.property-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    transition: width 0.5s ease;
+    z-index: 0;
+}
+
+.property-card:hover::before,
+.property-card:focus::before {
+    width: 100%;
+}
+
+.property-card:hover,
+.property-card:focus {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    outline: none;
+}
+
+.property-card:hover .card-icon,
+.property-card:focus .card-icon,
+.property-card:hover .card-content,
+.property-card:focus .card-content,
+.property-card:hover .card-arrow,
+.property-card:focus .card-arrow {
+    color: var(--white);
+}
+
+/* أيقونة البطاقة */
+.card-icon {
+    position: relative;
+    z-index: 1;
+    transition: var(--transition);
+}
+
+.card-icon .icon {
+    font-size: 3.5rem;
+    display: block;
+}
+
+/* محتوى البطاقة */
+.card-content {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+    transition: var(--transition);
+}
+
+.card-content h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.property-card:hover .card-content p,
+.property-card:focus .card-content p {
+    color: var(--white);
+    opacity: 0.9;
+}
+
+/* السهم */
+.card-arrow {
+    position: relative;
+    z-index: 1;
+    transition: var(--transition);
+    color: var(--text-secondary);
+}
+
+.card-arrow svg {
+    width: 32px;
+    height: 32px;
+    transform: rotate(180deg);
+    transition: var(--transition);
+}
+
+.property-card:hover .card-arrow svg,
+.property-card:focus .card-arrow svg {
+    transform: rotate(180deg) translateX(-10px);
+}
+
+/* الفوتر */
+.main-footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.main-footer p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* تأثيرات التحميل */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.property-card {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.property-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+/* التصميم المتجاوب */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 2rem 0;
+    }
+    
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    
+    .section-title p {
+        font-size: 1rem;
+    }
+    
+    .property-type-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .property-card {
+        padding: 2rem;
+    }
+    
+    .card-icon .icon {
+        font-size: 3rem;
+    }
+    
+    .card-content h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    .logo p {
+        font-size: 0.85rem;
+    }
+    
+    .section-title h2 {
+        font-size: 1.75rem;
+    }
+    
+    .property-card {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+    
+    .card-icon .icon {
+        font-size: 2.5rem;
+    }
+    
+    .card-content h3 {
+        font-size: 1.25rem;
+    }
+    
+    .card-content p {
+        font-size: 0.9rem;
+    }
+    
+    .card-arrow svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* دعم الوضع الداكن */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #1a1a1a;
+        --text-primary: #e0e0e0;
+        --text-secondary: #a0a0a0;
+        --white: #2a2a2a;
+    }
+    
+    .property-card {
+        background: #2a2a2a;
+    }
+}
+
+/* إمكانية الوصول */
+.property-card:focus {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+/* تحسينات الأداء */
+.property-card {
+    will-change: transform, box-shadow;
+}
+
+.property-card::before {
+    will-change: width;
+}
