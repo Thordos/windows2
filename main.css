@@ -1,0 +1,75 @@
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 30px 0;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+header p {
+    font-size: 18px;
+    color: #666;
+}
+
+main {
+    text-align: center;
+}
+
+main h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.property-type-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.property-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 220px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.property-card .icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.property-card h3 {
+    margin: 10px 0 5px;
+    color: #1a73e8;
+}
+
+.property-card p {
+    font-size: 14px;
+    color: #555;
+}
