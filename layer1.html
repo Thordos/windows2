@@ -4,80 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>عقارات الفيوم - اختر نوع العقار</title>
-    
-    <!-- الخطوط -->
+    <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- ملف CSS -->
-    <link rel="stylesheet" href="style/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- الهيدر -->
-    <header class="main-header">
-        <div class="container">
-            <div class="logo">
-                <h1>عقارات الفيوم</h1>
-                <p>بوابتك لأفضل العقارات في المحافظة</p>
-            </div>
-        </div>
-    </header>
-
-    <!-- المحتوى الرئيسي -->
-    <main class="main-content">
-        <div class="container">
-            <!-- العنوان -->
-            <div class="section-title">
-                <h2>اختر نوع العقار</h2>
-                <p>حدد نوع العقار الذي تبحث عنه</p>
-            </div>
-
-            <!-- بطاقات اختيار نوع العقار -->
-            <div class="property-type-grid">
-                <!-- بطاقة المنازل -->
-                <div class="property-card" data-type="houses" tabindex="0">
-                    <div class="card-icon">
-                        <span class="icon">🏠</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>منازل</h3>
-                        <p>شقق وفلل ومنازل سكنية</p>
-                    </div>
-                    <div class="card-arrow">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
+    <div class="container">
+        <header>
+            <h1>مرحباً بك في عقارات الفيوم</h1>
+            <p>ابحث عن عقارك المثالي في محافظة الفيوم</p>
+        </header>
+        
+        <main>
+            <h2>اختر نوع العقار</h2>
+            <div class="property-type-cards">
+                <div class="property-card" data-type="houses">
+                    <div class="icon">🏠</div>
+                    <h3>منازل</h3>
+                    <p>شقق وفلل ومنازل سكنية</p>
                 </div>
-
-                <!-- بطاقة الأراضي -->
-                <div class="property-card" data-type="lands" tabindex="0">
-                    <div class="card-icon">
-                        <span class="icon">🌾</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>أراضي</h3>
-                        <p>أراضي زراعية وسكنية وتجارية</p>
-                    </div>
-                    <div class="card-arrow">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
+                
+                <div class="property-card" data-type="lands">
+                    <div class="icon">🌾</div>
+                    <h3>أراضي</h3>
+                    <p>أراضي زراعية وسكنية</p>
                 </div>
             </div>
-        </div>
-    </main>
-
-    <!-- الفوتر -->
-    <footer class="main-footer">
-        <div class="container">
-            <p>&copy; 2024 عقارات الفيوم. جميع الحقوق محفوظة.</p>
-        </div>
-    </footer>
-
-    <!-- ملف JavaScript -->
+        </main>
+    </div>
+    
     <script src="js/main.js"></script>
 </body>
 </html>
